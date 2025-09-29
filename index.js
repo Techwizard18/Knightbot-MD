@@ -73,7 +73,7 @@ setInterval(() => {
 let phoneNumber = "911234567890"
 let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
 
-global.botname = "KNIGHT BOT"
+global.botname = "VOSTY BOT"
 global.themeemoji = "•"
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
@@ -144,7 +144,7 @@ async function startXeonBotInc() {
                 if (mek.key && mek.key.remoteJid) {
                     await XeonBotInc.sendMessage(mek.key.remoteJid, {
                         text: '❌ An error occurred while processing your message.',
-                        contextInfo: {
+                        /*contextInfo: {
                             forwardingScore: 1,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
@@ -152,7 +152,7 @@ async function startXeonBotInc() {
                                 newsletterName: 'KnightBot MD',
                                 serverMessageId: -1
                             }
-                        }
+                        }*/
                     }).catch(console.error);
                 }
             }
@@ -244,7 +244,7 @@ async function startXeonBotInc() {
             await XeonBotInc.sendMessage(botNumber, {
                 text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready!
                 \n✅Make sure to join below channel`,
-                contextInfo: {
+                /*contextInfo: {
                     forwardingScore: 1,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -252,7 +252,7 @@ async function startXeonBotInc() {
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
 
             await delay(1999)
