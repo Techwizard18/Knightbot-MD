@@ -32,7 +32,7 @@ async function stickerCommand(sock, chatId, message) {
     if (!mediaMessage) {
         await sock.sendMessage(chatId, { 
             text: 'Please reply to an image/video with .sticker, or send an image/video with .sticker as the caption.',
-            contextInfo: {
+            /*contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -40,7 +40,7 @@ async function stickerCommand(sock, chatId, message) {
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         },{ quoted: messageToQuote });
         return;
     }
@@ -54,7 +54,7 @@ async function stickerCommand(sock, chatId, message) {
         if (!mediaBuffer) {
             await sock.sendMessage(chatId, { 
                 text: 'Failed to download media. Please try again.',
-                contextInfo: {
+                /*contextInfo: {
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
@@ -62,7 +62,7 @@ async function stickerCommand(sock, chatId, message) {
                         newsletterName: 'KnightBot MD',
                         serverMessageId: -1
                     }
-                }
+                }*/
             });
             return;
         }
@@ -212,7 +212,7 @@ async function stickerCommand(sock, chatId, message) {
         console.error('Error in sticker command:', error);
         await sock.sendMessage(chatId, { 
             text: 'Failed to create sticker! Try again later.',
-            contextInfo: {
+            /*contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
@@ -220,7 +220,7 @@ async function stickerCommand(sock, chatId, message) {
                     newsletterName: 'KnightBot MD',
                     serverMessageId: -1
                 }
-            }
+            }*/
         });
     }
 }
